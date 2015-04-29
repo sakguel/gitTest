@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Artikel"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{5E1454BD-3D7D-4A33-8C7A-C3633A6A43CD}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{D14C271E-8E7F-4A6C-B387-CB35BE4269D0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -407,7 +407,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">0</property>
+                  name="NumKeyColumns">1</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the null values are treated as equal values."
@@ -489,6 +489,21 @@
                 <output
                   refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]"
                   name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[aktuelle Preisempfehlung]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[aktuelle Preisempfehlung]"
+                      name="aktuelle Preisempfehlung">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[aktuelle Preisempfehlung]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -978,7 +993,7 @@
         <NodeLayout
           Size="130,42"
           Id="Package\Data Flow Task\Merge Join"
-          TopLeft="317,240" />
+          TopLeft="315,239" />
         <NodeLayout
           Size="98,42"
           Id="Package\Data Flow Task\Sort"
@@ -1061,26 +1076,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="174,76"
+              EndConnector="151.666666666667,75"
               Start="0,0"
-              End="174,68.5">
+              End="151.666666666667,67.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34" />
+                    End="0,40.4528875379939" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34"
-                    Point2="0,38"
-                    Point3="4,38" />
+                    Point1="0,40.4528875379939"
+                    Point2="0,44.4528875379939"
+                    Point3="4,44.4528875379939" />
                   <mssgle:LineSegment
-                    End="170,38" />
+                    End="147.666666666667,44.4528875379939" />
                   <mssgle:CubicBezierSegment
-                    Point1="170,38"
-                    Point2="174,38"
-                    Point3="174,42" />
+                    Point1="147.666666666667,44.4528875379939"
+                    Point2="151.666666666667,44.4528875379939"
+                    Point3="151.666666666667,48.4528875379939" />
                   <mssgle:LineSegment
-                    End="174,68.5" />
+                    End="151.666666666667,67.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1095,26 +1110,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-174.166666666667,77"
+              EndConnector="-176.166666666667,76"
               Start="0,0"
-              End="-174.166666666667,69.5">
+              End="-176.166666666667,68.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.6382978723404" />
+                    End="0,41.0455927051672" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.6382978723404"
-                    Point2="0,45.6382978723404"
-                    Point3="-4,45.6382978723404" />
+                    Point1="0,41.0455927051672"
+                    Point2="0,45.0455927051672"
+                    Point3="-4,45.0455927051672" />
                   <mssgle:LineSegment
-                    End="-170.166666666667,45.6382978723404" />
+                    End="-172.166666666667,45.0455927051672" />
                   <mssgle:CubicBezierSegment
-                    Point1="-170.166666666667,45.6382978723404"
-                    Point2="-174.166666666667,45.6382978723404"
-                    Point3="-174.166666666667,49.6382978723404" />
+                    Point1="-172.166666666667,45.0455927051672"
+                    Point2="-176.166666666667,45.0455927051672"
+                    Point3="-176.166666666667,49.0455927051672" />
                   <mssgle:LineSegment
-                    End="-174.166666666667,69.5" />
+                    End="-176.166666666667,68.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
