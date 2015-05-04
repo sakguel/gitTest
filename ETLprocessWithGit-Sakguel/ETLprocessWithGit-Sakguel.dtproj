@@ -26,11 +26,12 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DEVTESTSQL14</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb8h6+vEJRUKaZ3OI8a1RcAAAAAACAAAAAAADZgAAwAAAABAAAABTY9aRWrUf0hKzHCYB8tSeAAAAAASAAACgAAAAEAAAAFUUyOvx6kx3Z2gFXmqw/UiIAAAAF/KF/IgF4Kfj9H7A9jIfZTPuJsl7wXbc9az/5D4kcljQCWl/y1wmedx+/B3AT1pW4EQCtB9OfwGJ14gV4p5hvfjYKp4P/0z35QOaDjw1U9ucd0BmaIxisqVX10W1fm3OSVMh7OBJXg9VWoeAZApo+4z6yRKnsUVrs6+f42/c2YtL0zMIBk6NABQAAADBzUtx5LuVEtQds6Aa7ZotmwnE1w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb8h6+vEJRUKaZ3OI8a1RcAAAAAACAAAAAAADZgAAwAAAABAAAABHOxCL1zoUdAV3kSNKM5FLAAAAAASAAACgAAAAEAAAAFC0OYqranV+vLsE2N3T9ySIAAAAoHUJSo1Hd0L8gpqzfSbtzhrxT7KHCOAfAdFaSJWnlcSMKP/J8qK+xRPYmIbrERIQKm+vCZNovibQ+bjd0JGG4clrCF6XgRYFQUuRUIlGveMLu+kkJEQsaPtUhieugn2SZbiJFERtG8Zm35NAN2mymINSA7smQZhYxKhHy93fAsl6im5AlUtUphQAAABkkLgWbXYkuzSTvjRANkzxK/zapQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Artikel.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="FactSales.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -42,10 +43,10 @@
                 <SSIS:Property SSIS:Name="Name">Artikel</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4AD00DA4-B1AF-4ECC-81CB-8755B6D082CF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B6CE109F-6E1F-42A3-AD62-5A7CD93B48C8}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -228,6 +229,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="FactSales.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{7F5C15CC-9DA2-4C92-B4C4-FD1B3F7D4964}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">FactSales</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B29FA74C-DD39-4033-9DCE-6BABC9D53335}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
