@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Artikel"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{B6CE109F-6E1F-42A3-AD62-5A7CD93B48C8}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{CF4DFC5C-C5E5-4907-A643-1D24EA4E8332}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -999,21 +999,21 @@
           Id="Package\Data Flow Task\Sort"
           TopLeft="159,122" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="314,334" />
-        <NodeLayout
           Size="130,42"
           Id="Package\Data Flow Task\Merge Join"
           TopLeft="315,239" />
         <NodeLayout
           Size="106,42"
           Id="Package\Data Flow Task\Farbe"
-          TopLeft="472,49" />
+          TopLeft="527,38" />
         <NodeLayout
           Size="109,42"
           Id="Package\Data Flow Task\Artikel"
           TopLeft="143,37" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="314,334" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output1]"
           TopLeft="576.5,163">
@@ -1084,30 +1084,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
-          TopLeft="525,91">
+          TopLeft="578.25,80">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="51.5,30"
+              EndConnector="0,41"
               Start="0,0"
-              End="51.5,22.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="4,15" />
-                  <mssgle:LineSegment
-                    End="47.5,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47.5,15"
-                    Point2="51.5,15"
-                    Point3="51.5,19" />
-                  <mssgle:LineSegment
-                    End="51.5,22.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1188,19 +1176,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Farbe">
     <Properties>
       <Property>
@@ -1215,6 +1190,19 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Artikel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
