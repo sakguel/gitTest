@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Artikel"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{CF4DFC5C-C5E5-4907-A643-1D24EA4E8332}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{15F72E38-078C-4197-856B-72D30A4AFB04}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -169,6 +169,15 @@
                       lineageId="Package\Data Flow Task\Artikel.Outputs[OLE DB Source Output].Columns[Mindestlagermenge]"
                       name="Mindestlagermenge"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Artikel.Outputs[OLE DB Source Output].Columns[Rahmenhöhe]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Artikel.Outputs[OLE DB Source Output].ExternalColumns[Rahmenhöhe]"
+                      lineageId="Package\Data Flow Task\Artikel.Outputs[OLE DB Source Output].Columns[Rahmenhöhe]"
+                      name="Rahmenhöhe"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -259,6 +268,11 @@
                       lineageId="Package\Data Flow Task\Artikel.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Artikel.Outputs[OLE DB Source Error Output].Columns[Rahmenhöhe]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Artikel.Outputs[OLE DB Source Error Output].Columns[Rahmenhöhe]"
+                      name="Rahmenhöhe" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -454,6 +468,11 @@
                       cachedName="Farbe_ID"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Farbe_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[Rahmenhöhe]"
+                      cachedDataType="i4"
+                      cachedName="Rahmenhöhe"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Rahmenhöhe]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -495,6 +514,19 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[aktuelle Preisempfehlung]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Rahmenhöhe]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Rahmenhöhe]"
+                      name="Rahmenhöhe">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[Rahmenhöhe]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -735,6 +767,22 @@
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Rahmenhöhe]"
+                      cachedDataType="i4"
+                      cachedName="Rahmenhöhe"
+                      lineageId="Package\Data Flow Task\Artikel.Outputs[OLE DB Source Output].Columns[Rahmenhöhe]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -827,6 +875,19 @@
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Data Flow Task\Artikel.Outputs[OLE DB Source Output].Columns[Mindestlagermenge]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Rahmenhöhe]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Rahmenhöhe]"
+                      name="Rahmenhöhe">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Artikel.Outputs[OLE DB Source Output].Columns[Rahmenhöhe]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1009,7 +1070,7 @@
         <NodeLayout
           Size="109,42"
           Id="Package\Data Flow Task\Artikel"
-          TopLeft="143,37" />
+          TopLeft="161,34" />
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
@@ -1106,30 +1167,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="197.5,79">
+          TopLeft="211.75,76">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.5,43"
+              EndConnector="0,46"
               Start="0,0"
-              End="10.5,35.5">
+              End="0,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="4,21.5" />
-                  <mssgle:LineSegment
-                    End="6.5,21.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.5,21.5"
-                    Point2="10.5,21.5"
-                    Point3="10.5,25.5" />
-                  <mssgle:LineSegment
-                    End="10.5,35.5" />
+                    End="0,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
