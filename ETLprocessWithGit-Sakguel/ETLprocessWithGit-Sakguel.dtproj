@@ -26,27 +26,26 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DEVTESTSQL14</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb8h6+vEJRUKaZ3OI8a1RcAAAAAACAAAAAAADZgAAwAAAABAAAABHOxCL1zoUdAV3kSNKM5FLAAAAAASAAACgAAAAEAAAAFC0OYqranV+vLsE2N3T9ySIAAAAoHUJSo1Hd0L8gpqzfSbtzhrxT7KHCOAfAdFaSJWnlcSMKP/J8qK+xRPYmIbrERIQKm+vCZNovibQ+bjd0JGG4clrCF6XgRYFQUuRUIlGveMLu+kkJEQsaPtUhieugn2SZbiJFERtG8Zm35NAN2mymINSA7smQZhYxKhHy93fAsl6im5AlUtUphQAAABkkLgWbXYkuzSTvjRANkzxK/zapQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb8h6+vEJRUKaZ3OI8a1RcAAAAAACAAAAAAADZgAAwAAAABAAAAChHm3HEkAVxkC8D+w31rh4AAAAAASAAACgAAAAEAAAAPyINHmNOpL31npPXBFYe5qIAAAAeRmeqic4w+ntb96EUoQTjcVzcwql3edIbC7sWdF2w2RjvrSWzCmClcf0qiIoXcwlArwHhe0VXsys+Vdtp4gsALeyl+VeOA0p3ZM4HLnZdgwQTOVPFutD37rL86BgIfehDlezSKIOGHO1tTGk/RalNGJP9c4Lg6MUiinu4ylgZX8VtkNblmWU+RQAAACh6aMMbOJjNVP+cGsZFbxxUDVW4g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Artikel.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FactSales.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Artikel.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="FactSales.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{A6C7BE3A-9524-40CF-96F6-0018A402E149}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Artikel</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{7F5C15CC-9DA2-4C92-B4C4-FD1B3F7D4964}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">FactSales</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B6CE109F-6E1F-42A3-AD62-5A7CD93B48C8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{04F8C37D-C001-4C30-8EA4-3EC4D5017A9C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -229,23 +228,6 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="FactSales.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{7F5C15CC-9DA2-4C92-B4C4-FD1B3F7D4964}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">FactSales</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B29FA74C-DD39-4033-9DCE-6BABC9D53335}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
